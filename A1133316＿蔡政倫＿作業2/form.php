@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>夏令營報名表單</title>
+    <script>
+        function alertMessage(event) {
+            alert("您已經報名完成！");
+        }
+    </script>
+</head>
+<body style="background-color: #81CEEB">
+    <h1>夏令營報名表單(請填寫資料)</h1>
+    <form action="success.php" method="POST" onsubmit="alertMessage()">   
+        <p>姓名：<input type="text" name="name" required></p>
+        <p>出生年月日：<input type="date" name="birthday" required></p>
+        <p>電話：<input type="tel" name="phone" required></p>
+        <p>Email：<input type="email" name="email" required></p>
+        <p>通訊地址：<input type="text" name="address" style="width: 300px;" required></p>
+        <p>
+            性別：
+            <input type="radio" name="gender" value="男" required>男
+            <input type="radio" name="gender" value="女" required>女
+        </p>
+        <p>
+            飲食：
+            <input type="radio" name="food" value="葷" required>吃葷
+            <input type="radio" name="food" value="素" required>素食
+        </p>
+        <p>緊急聯絡人：<input type="text" name="em_name" required></p>
+        <p>緊急聯絡人電話：<input type="text" name="em_phone" required></p>
+        <p>
+            報名梯次 (可重複選擇)：<br>
+            <input type="checkbox" name="s[]" value="1">第一梯次 (10/14~10/18)<br>
+            <input type="checkbox" name="s[]" value="2">第二梯次 (11/18~11/22)<br>
+            <input type="checkbox" name="s[]" value="3">第三梯次 (12/25~12/29)
+        </p>
+        <p style="color: red;">備註：報名後請記得至官方網站繳費</p>
+        <p>
+            <input type="submit" value="提交報名表">
+            <input type="reset" value="重填">
+        </p>
+    </form>
+    
+    <br>
+    <hr>
+    <br>
+    <a href="information.php">
+        <button type="button">回到報名資訊</button>
+    </a>
+</body>
+</html>
